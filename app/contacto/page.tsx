@@ -17,7 +17,7 @@ export default function Contacto() {
             const formData = new FormData(e.currentTarget);
             const data = Object.fromEntries(formData.entries());
 
-            await fetch('http://localhost:5678/webhook/15cf8cfd-6e50-429d-aa46-d7a4f13cb807', {
+            await fetch('https://some-hats-rescue.loca.lt/webhook/15cf8cfd-6e50-429d-aa46-d7a4f13cb807', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
