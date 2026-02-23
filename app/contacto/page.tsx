@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from './page.module.css';
+import { submitApplication } from './actions';
 
 export default function Contacto() {
     const [academicStatus, setAcademicStatus] = useState('');
@@ -17,18 +18,16 @@ export default function Contacto() {
             const formData = new FormData(e.currentTarget);
             const data = Object.fromEntries(formData.entries());
 
-            await fetch('https://some-hats-rescue.loca.lt/webhook/15cf8cfd-6e50-429d-aa46-d7a4f13cb807', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
+            const result = await submitApplication(data);
 
-            setIsSubmitted(true);
+            if (result.success) {
+                setIsSubmitted(true);
+            } else {
+                throw new Error(result.error);
+            }
         } catch (error) {
             console.error('Error enviando la aplicación:', error);
-            alert('Hubo un error al enviar tu aplicación. Por favor, inténtalo de nuevo.');
+            alert('Hubo un error al enviar tu aplicación. Asegúrate de presionar "Click to Continue" en el enlace de loca.lt primero.');
         } finally {
             setIsSubmitting(false);
         }
