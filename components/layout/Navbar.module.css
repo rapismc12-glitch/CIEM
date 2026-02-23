@@ -1,0 +1,80 @@
+.header {
+    background-color: var(--color-bg-main);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logoBrand {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+}
+
+.nav {
+    display: flex;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    gap: var(--space-6);
+}
+
+.navList a {
+    color: var(--color-base);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.navList a:hover {
+    color: var(--color-primary);
+}
+
+.mobileMenuBtn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-base);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mobileMenuBtn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-bg-main);
+        padding: var(--space-4) 0;
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: var(--shadow-md);
+    }
+
+    .navOpen {
+        display: block;
+    }
+
+    .navList {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-4);
+    }
+}

@@ -1,0 +1,87 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 2rem 0;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.container {
+    background-color: #F5F5F5;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 650px;
+    width: 100%;
+    color: #545454;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #3DC7B2;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.iconWrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    background-color: rgba(61, 199, 178, 0.1);
+    color: #3DC7B2;
+    padding: 1.25rem;
+    border-radius: 50%;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+}
+
+/* Small variant */
+.small {
+    padding: 2rem 1.5rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.small .iconWrapper {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+}
+
+.small .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.descriptionSmall {
+    font-size: 1rem;
+    margin: 0;
+    color: #545454;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

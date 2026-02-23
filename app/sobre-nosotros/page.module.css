@@ -1,0 +1,123 @@
+.header {
+    background-color: var(--color-bg-secondary);
+    padding: var(--space-16) 0 var(--space-12);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--color-base-darker);
+    margin-bottom: var(--space-4);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+}
+
+.section {
+    padding: var(--space-16) 0;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-16);
+}
+
+.textContent h2 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-6);
+    border-bottom: 2px solid var(--color-bg-secondary);
+    padding-bottom: var(--space-3);
+    display: inline-block;
+}
+
+.textContent p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-6);
+}
+
+.mtLarge {
+    margin-top: var(--space-12);
+}
+
+.documentAction {
+    margin-top: var(--space-8);
+    padding: var(--space-8);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.documentAction .btn {
+    color: var(--color-base);
+    border-color: var(--color-base);
+}
+
+.documentAction .btn:hover {
+    background-color: var(--color-base);
+    color: var(--color-bg-main);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.infoBox {
+    background-color: var(--color-base);
+    color: var(--color-bg-main);
+    padding: var(--space-6);
+    border-radius: var(--radius-md);
+}
+
+.infoBox h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+    font-family: var(--font-sans);
+}
+
+.infoList {
+    line-height: 2;
+    list-style: none;
+}
+
+.teamTeaser {
+    border: 1px solid var(--color-border);
+    padding: var(--space-6);
+    border-radius: var(--radius-md);
+}
+
+.teamTeaser h3 {
+    color: var(--color-base-darker);
+    margin-bottom: var(--space-3);
+    font-family: var(--font-sans);
+}
+
+.teamTeaser p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-4);
+}
+
+.linkAction {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.linkAction:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+    }
+}

@@ -1,0 +1,78 @@
+.card {
+    background-color: var(--color-bg-main);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.image {
+    object-fit: cover;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-base-light), var(--color-base));
+    color: var(--color-text-inverse);
+}
+
+.initials {
+    font-size: 3rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+.content {
+    padding: var(--space-6);
+}
+
+.name {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-1);
+    color: var(--color-base-darker);
+}
+
+.role {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+}
+
+.bio {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-4);
+    line-height: 1.5;
+}
+
+.social {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: auto;
+}
+
+.link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}

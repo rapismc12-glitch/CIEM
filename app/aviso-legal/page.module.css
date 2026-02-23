@@ -1,0 +1,36 @@
+.legalContent {
+    color: var(--color-text-body);
+    line-height: 1.7;
+    font-size: 1.125rem;
+}
+
+.legalContent h2 {
+    color: var(--color-primary);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-4);
+    font-size: 1.5rem;
+}
+
+.legalContent p {
+    margin-bottom: var(--space-4);
+}
+
+.legalContent ul {
+    list-style-type: disc;
+    padding-left: var(--space-8);
+    margin-bottom: var(--space-6);
+}
+
+.legalContent li {
+    margin-bottom: var(--space-2);
+}
+
+.legalContent a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.legalContent a:hover {
+    text-decoration: underline;
+}
