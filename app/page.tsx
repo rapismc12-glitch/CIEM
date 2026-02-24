@@ -122,7 +122,7 @@ export default function Home() {
                     <div className={styles.ctaContent}>
                         <h2>¿Te interesa la investigación económica?</h2>
                         <p>Únete a nuestro equipo y desarrolla tu perfil académico y experiencia formativa integrándote como Investigador, Colaborador o miembro del Equipo Editorial.</p>
-                        <Link href="/contacto" className="btn btn-primary">Aplicar ahora</Link>
+                        <Link href="/contacto" className={styles.ctaButton}>Aplicar ahora</Link>
                     </div>
                 </div>
             </section>

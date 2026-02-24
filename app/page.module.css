@@ -164,6 +164,26 @@
     margin-top: var(--space-4);
 }
 
+.ctaButton {
+    background-color: var(--color-bg-main);
+    color: var(--color-primary);
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    font-size: 1.15rem;
+    border-radius: var(--radius-full);
+    border: none;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+}
+
+.ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    background-color: var(--color-bg-main);
+    color: var(--color-primary-hover);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .grid3 {
