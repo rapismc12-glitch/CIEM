@@ -140,6 +140,7 @@
 }
 
 .teamTeaser {
+    background-color: var(--color-bg-primary);
     border: 1px solid var(--color-border);
     padding: var(--space-6);
     border-radius: var(--radius-md);
