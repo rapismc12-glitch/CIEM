@@ -2,11 +2,13 @@
 
 export async function submitApplication(data: any) {
     try {
-        const response = await fetch('https://e4c664ced55274.lhr.life/webhook/15cf8cfd-6e50-429d-aa46-d7a4f13cb807', {
+        // Utiliza FormSubmit para enviar el JSON directamente al correo
+        // En un futuro, simplemente cambia esta URL por la de N8N Cloud o tu servidor VPS
+        const response = await fetch('https://formsubmit.co/ajax/rapismc12@gmail.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Bypass-Tunnel-Reminder': 'true' // Localtunnel specific header to bypass warning
+                'Accept': 'application/json'
             },
             body: JSON.stringify(data),
         });
