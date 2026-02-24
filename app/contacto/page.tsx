@@ -226,7 +226,7 @@ export default function Contacto() {
             <div className={styles.contactInfo}>
                 <p>Para dudas o información adicional puedes contactar a la dirección del centro:</p>
                 <ul>
-                    <li><strong>Correo institucional:</strong> <a href="mailto:mv202447722@alm.buap.mx">mv202447722@alm.buap.mx</a></li>
+                    <li><strong>Correo institucional:</strong> <a href="mailto:rapismc12@gmail.com">rapismc12@gmail.com</a></li>
                     <li><strong>Teléfono:</strong> <a href="tel:+522225309754">222 530 9754</a></li>
                 </ul>
             </div>

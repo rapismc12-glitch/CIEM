@@ -41,7 +41,7 @@ export default function AvisoLegal() {
 
                 <h2>Contacto</h2>
                 <p>Para cualquier duda sobre este aviso legal:</p>
-                <p><strong>Correo:</strong> <a href="mailto:mv202447722@alm.buap.mx">mv202447722@alm.buap.mx</a></p>
+                <p><strong>Correo:</strong> <a href="mailto:rapismc12@gmail.com">rapismc12@gmail.com</a></p>
             </div>
         </div>
     );

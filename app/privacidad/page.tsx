@@ -59,7 +59,7 @@ export default function Privacidad() {
 
                 <h2>Contacto</h2>
                 <p>Para dudas o solicitudes relacionadas con datos personales:</p>
-                <p><strong>Correo:</strong> <a href="mailto:mv202447722@alm.buap.mx">mv202447722@alm.buap.mx</a></p>
+                <p><strong>Correo:</strong> <a href="mailto:rapismc12@gmail.com">rapismc12@gmail.com</a></p>
                 <p><strong>Teléfono:</strong> <a href="tel:+522225309754">222 530 9754</a></p>
             </div>
         </div>
