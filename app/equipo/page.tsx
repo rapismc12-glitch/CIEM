@@ -13,7 +13,7 @@ export default function Equipo() {
             <div style={{ maxWidth: '800px', margin: '0 auto 4rem auto' }}>
                 <div style={{
                     padding: '2rem',
-                    backgroundColor: 'white',
+                    backgroundColor: 'var(--color-bg-primary)',
                     borderRadius: 'var(--radius-md)',
                     boxShadow: 'var(--shadow-sm)',
                     borderLeft: '4px solid var(--color-primary)',
