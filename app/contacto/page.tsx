@@ -25,9 +25,9 @@ export default function Contacto() {
             } else {
                 throw new Error(result.error);
             }
-        } catch (error) {
+        } catch (error: any) {
             console.error('Error enviando la aplicación:', error);
-            alert('Hubo un error al enviar tu aplicación. Asegúrate de presionar "Click to Continue" en el enlace de loca.lt primero.');
+            alert(`Hubo un error al conectar con el servidor: ${error.message}`);
         } finally {
             setIsSubmitting(false);
         }

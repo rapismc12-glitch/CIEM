@@ -12,12 +12,13 @@ export async function submitApplication(data: any) {
         });
 
         if (!response.ok) {
-            throw new Error(`Server returned status: ${response.status}`);
+            const errorText = await response.text();
+            throw new Error(`Status ${response.status}: ${errorText.substring(0, 50)}`);
         }
 
         return { success: true };
-    } catch (error) {
+    } catch (error: any) {
         console.error('Webhook error:', error);
-        return { success: false, error: 'Network or internal error' };
+        return { success: false, error: error.message || 'Error desconocido' };
     }
 }
