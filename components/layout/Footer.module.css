@@ -1,6 +1,6 @@
 .footer {
-    background-color: var(--color-base);
-    color: var(--color-bg-secondary);
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
     padding-top: var(--space-12);
     margin-top: auto;
     /* Push to bottom */
@@ -17,19 +17,19 @@
     font-family: var(--font-serif);
     font-weight: 700;
     font-size: 2rem;
-    color: var(--color-bg-main);
+    color: var(--color-footer-title);
     margin-bottom: var(--space-4);
     letter-spacing: -0.5px;
 }
 
 .description {
-    color: var(--color-bg-secondary);
+    color: var(--color-footer-text);
     opacity: 0.8;
     max-width: 300px;
 }
 
 .columnTitle {
-    color: var(--color-bg-main);
+    color: var(--color-footer-title);
     font-family: var(--font-sans);
     font-size: 1.125rem;
     margin-bottom: var(--space-6);
@@ -45,7 +45,7 @@
 }
 
 .linkList a {
-    color: var(--color-bg-secondary);
+    color: var(--color-footer-text);
     opacity: 0.8;
 }
 

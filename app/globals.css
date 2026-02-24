@@ -2,29 +2,38 @@
 
 :root {
   /* CIEM Official Palette */
-  --color-primary: #3DC7B2; /* Turquesa institucional */
+  --color-primary: #3DC7B2;
+  /* Turquesa institucional */
   --color-primary-hover: #31A593;
-  --color-base: #545454; /* Gris profundo */
+  --color-base: #545454;
+  /* Gris profundo */
   --color-base-light: #707070;
   --color-base-dark: #333333;
   --color-base-darker: #1A1A1A;
-  
+
   /* Neutral Palette */
-  --color-bg-main: #FFFFFF; /* Blanco */
-  --color-bg-secondary: #F5F5F5; /* Gris claro UI */
+  --color-bg-main: #FFFFFF;
+  /* Blanco */
+  --color-bg-secondary: #F5F5F5;
+  /* Gris claro UI */
   --color-bg-tertiary: #E8E8E8;
   --color-border: #E2E8F0;
-  
+
   /* Text Colors */
   --color-text-main: #333333;
   --color-text-secondary: #545454;
   --color-text-muted: #888888;
   --color-text-inverse: #FFFFFF;
-  
+
+  /* Footer Colors */
+  --color-footer-bg: var(--color-base);
+  --color-footer-text: var(--color-bg-secondary);
+  --color-footer-title: var(--color-bg-main);
+
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Merriweather', 'Lora', serif;
-  
+
   /* Spacing System */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -36,7 +45,7 @@
   --space-16: 4rem;
   --space-24: 6rem;
   --space-32: 8rem;
-  
+
   /* Border Radius */
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -44,9 +53,51 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Form Elements */
+  --color-border-focus: var(--color-primary);
+  --color-input-bg: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Neutral Palette Dark Mode */
+    --color-bg-main: #121212;
+    /* Fondo casi negro */
+    --color-bg-secondary: #1E1E1E;
+    /* Gris oscuro para UI/Tarjetas */
+    --color-bg-tertiary: #2D2D2D;
+    --color-border: #333333;
+
+    /* Text Colors Dark Mode */
+    --color-text-main: #F5F5F5;
+    /* Texto principal claro */
+    --color-text-secondary: #CCCCCC;
+    /* Texto secundario gris claro */
+    --color-text-muted: #888888;
+    --color-text-inverse: #121212;
+
+    /* Base Colors Dark Mode adjustments for headers */
+    --color-base: #DDDDDD;
+    --color-base-dark: #EEEEEE;
+    --color-base-darker: #FFFFFF;
+
+    /* Footer Colors Dark Mode */
+    --color-footer-bg: #0A0A0A;
+    --color-footer-text: #CCCCCC;
+    --color-footer-title: #FFFFFF;
+
+    /* Inputs Dark Mode */
+    --color-input-bg: #1A1A1A;
+
+    /* Shadows Dark Mode */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+  }
 }
 
 * {
@@ -64,7 +115,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   color: var(--color-base-darker);
   line-height: 1.2;
@@ -87,7 +143,10 @@ a:hover {
 }
 
 /* Form Elements Reset */
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   font-family: inherit;
 }
 
