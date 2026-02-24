@@ -86,19 +86,14 @@ export default function InformalidadLaboralArticle() {
 
                 {/* 1️⃣ Gráfico - Serie Histórica */}
                 <figure style={{ margin: '3.5rem 0', textAlign: 'center' }}>
-                    <div style={{
-                        backgroundColor: 'var(--color-bg-secondary)',
-                        border: '2px dashed var(--color-border)',
-                        padding: '4rem 2rem',
-                        borderRadius: '0.5rem',
-                        color: 'var(--color-text-muted)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        minHeight: '250px',
-                        width: '100%'
-                    }}>
-                        Visualización en proceso de actualización
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', backgroundColor: '#fff', borderRadius: '0.5rem', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
+                        <Image
+                            src="/figura1-evolucion-pobreza.png"
+                            alt="Evolución de la Pobreza Multidimensional"
+                            fill
+                            style={{ objectFit: 'contain', padding: '1rem' }}
+                            sizes="(max-width: 800px) 100vw, 800px"
+                        />
                     </div>
                     <figcaption style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: 'var(--color-text-main)' }}>
                         <strong style={{ display: 'block', marginBottom: '0.25rem', color: 'var(--color-base-darker)', fontSize: '1rem' }}>Figura 1. Evolución de la Pobreza Multidimensional en México</strong>
@@ -119,19 +114,14 @@ export default function InformalidadLaboralArticle() {
 
                 {/* 2️⃣ Gráfico - Comparación Regional */}
                 <figure style={{ margin: '3.5rem 0', textAlign: 'center' }}>
-                    <div style={{
-                        backgroundColor: 'var(--color-bg-secondary)',
-                        border: '2px dashed var(--color-border)',
-                        padding: '4rem 2rem',
-                        borderRadius: '0.5rem',
-                        color: 'var(--color-text-muted)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        minHeight: '250px',
-                        width: '100%'
-                    }}>
-                        Visualización en proceso de actualización
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', backgroundColor: '#fff', borderRadius: '0.5rem', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
+                        <Image
+                            src="/figura2-disparidad-regional.png"
+                            alt="Disparidad Regional de la Pobreza"
+                            fill
+                            style={{ objectFit: 'contain', padding: '1rem' }}
+                            sizes="(max-width: 800px) 100vw, 800px"
+                        />
                     </div>
                     <figcaption style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: 'var(--color-text-main)' }}>
                         <strong style={{ display: 'block', marginBottom: '0.25rem', color: 'var(--color-base-darker)', fontSize: '1rem' }}>Figura 2. Disparidad Regional de la Pobreza en México</strong>
@@ -177,19 +167,14 @@ export default function InformalidadLaboralArticle() {
 
                 {/* 3️⃣ Gráfico - Mapa */}
                 <figure style={{ margin: '3.5rem 0', textAlign: 'center' }}>
-                    <div style={{
-                        backgroundColor: 'var(--color-bg-secondary)',
-                        border: '2px dashed var(--color-border)',
-                        padding: '4rem 2rem',
-                        borderRadius: '0.5rem',
-                        color: 'var(--color-text-muted)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        minHeight: '250px',
-                        width: '100%'
-                    }}>
-                        Visualización en proceso de actualización
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', backgroundColor: '#fff', borderRadius: '0.5rem', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
+                        <Image
+                            src="/figura3-distribucion-territorial.png"
+                            alt="Distribución Territorial de la Pobreza"
+                            fill
+                            style={{ objectFit: 'contain', padding: '1rem' }}
+                            sizes="(max-width: 800px) 100vw, 800px"
+                        />
                     </div>
                     <figcaption style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: 'var(--color-text-main)' }}>
                         <strong style={{ display: 'block', marginBottom: '0.25rem', color: 'var(--color-base-darker)', fontSize: '1rem' }}>Figura 3. Distribución de la Pobreza Multidimensional en México</strong>
