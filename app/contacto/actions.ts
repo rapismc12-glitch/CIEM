@@ -2,7 +2,7 @@
 
 export async function submitApplication(data: any) {
     try {
-        const response = await fetch('https://late-hands-enter.loca.lt/webhook/15cf8cfd-6e50-429d-aa46-d7a4f13cb807', {
+        const response = await fetch('https://shaggy-ways-switch.loca.lt/webhook/15cf8cfd-6e50-429d-aa46-d7a4f13cb807', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
