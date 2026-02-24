@@ -70,6 +70,57 @@
     gap: var(--space-8);
 }
 
+.leadParagraph {
+    font-size: 1.25rem;
+    color: var(--color-base-darker);
+    margin-bottom: var(--space-4);
+}
+
+.bulletsList {
+    list-style-type: disc;
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.bulletsList li {
+    margin-bottom: var(--space-2);
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+}
+
+.researchLines {
+    background-color: var(--color-bg-secondary);
+    padding: var(--space-6);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-6);
+}
+
+.researchLines h3 {
+    color: var(--color-primary);
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-2);
+    font-size: 1.25rem;
+}
+
+.researchLines h3:first-child {
+    margin-top: 0;
+}
+
+.researchLines p {
+    font-size: 1.05rem;
+    margin-bottom: var(--space-4);
+}
+
+.valuesListInline {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    text-align: center;
+    background-color: var(--color-bg-secondary);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    line-height: 1.8;
+}
+
 .infoBox {
     background-color: var(--color-base);
     color: var(--color-bg-main);
