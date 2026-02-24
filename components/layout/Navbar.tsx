@@ -13,7 +13,7 @@ export default function Navbar() {
             <div className={`container ${styles.navContainer}`}>
                 <div className={styles.logo}>
                     <Link href="/">
-                        <Image src="/logo.png" alt="CIEM Logo" width={180} height={50} className={`${styles.logoBrand} ${styles.logoImage}`} style={{ objectFit: 'contain' }} />
+                        <Image src="/logo-square.png" alt="CIEM Logo" width={75} height={75} className={`${styles.logoBrand} ${styles.logoImage}`} style={{ objectFit: 'contain' }} />
                     </Link>
                 </div>
 
