@@ -12,8 +12,8 @@ export default function Navbar() {
         <header className={styles.header}>
             <div className={`container ${styles.navContainer}`}>
                 <div className={styles.logo}>
-                    <Link href="/">
-                        <Image src="/logo.png" alt="CIEM Logo" width={180} height={50} className={styles.logoBrand} style={{ objectFit: 'contain' }} />
+                    <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
+                        <Image src="/logo-circular.png" alt="CIEM Logo" width={65} height={65} className={styles.logoBrand} style={{ objectFit: 'contain' }} />
                     </Link>
                 </div>
 
