@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import styles from './page.module.css';
-import { submitApplication } from './actions';
 
 export default function Contacto() {
     const [academicStatus, setAcademicStatus] = useState('');
@@ -18,13 +17,21 @@ export default function Contacto() {
             const formData = new FormData(e.currentTarget);
             const data = Object.fromEntries(formData.entries());
 
-            const result = await submitApplication(data);
+            const response = await fetch('https://formsubmit.co/ajax/rapismc12@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data),
+            });
 
-            if (result.success) {
-                setIsSubmitted(true);
-            } else {
-                throw new Error(result.error);
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`Status ${response.status}: ${errorText.substring(0, 50)}`);
             }
+
+            setIsSubmitted(true);
         } catch (error: any) {
             console.error('Error enviando la aplicación:', error);
             alert(`Hubo un error al conectar con el servidor: ${error.message}`);
