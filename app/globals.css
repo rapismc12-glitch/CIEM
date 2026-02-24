@@ -85,6 +85,10 @@
     --color-base-dark: #EEEEEE;
     --color-base-darker: #FFFFFF;
 
+    /* Primary Colors Dark Mode adjustments for links */
+    --color-primary: #51DFCA;
+    --color-primary-hover: #73E6D5;
+
     /* Footer Colors Dark Mode */
     --color-footer-bg: #0A0A0A;
     --color-footer-text: #CCCCCC;

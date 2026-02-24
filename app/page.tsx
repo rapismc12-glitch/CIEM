@@ -62,10 +62,44 @@ export default function Home() {
                         <h2 className={styles.sectionTitle}>Últimas Publicaciones</h2>
                         <Link href="/publicaciones" className={styles.viewAll}>Ver todas &rarr;</Link>
                     </div>
-                    <div className={styles.emptyStateContainer} style={{ textAlign: 'center', padding: '3rem 0', backgroundColor: 'var(--color-bg-secondary)', borderRadius: 'var(--radius-md)' }}>
-                        <p style={{ color: 'var(--color-text-secondary)', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>
-                            Las publicaciones del CIEM estarán disponibles próximamente conforme se desarrollen los primeros trabajos de investigación.
-                        </p>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5rem', marginBottom: '2rem' }}>
+                        <article style={{
+                            padding: '2rem',
+                            backgroundColor: 'var(--color-bg-main)',
+                            border: '1px solid var(--color-border)',
+                            borderRadius: 'var(--radius-md)',
+                            boxShadow: 'var(--shadow-sm)'
+                        }}>
+                            <div style={{ marginBottom: '1rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                                <span style={{
+                                    padding: '0.25rem 0.75rem',
+                                    backgroundColor: 'var(--color-bg-secondary)',
+                                    color: 'var(--color-text-secondary)',
+                                    borderRadius: '1rem',
+                                    fontSize: '0.8rem',
+                                    fontWeight: 600
+                                }}>
+                                    Policy Brief
+                                </span>
+                            </div>
+
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', lineHeight: 1.3 }}>
+                                <Link
+                                    href="/publicaciones/mercado-laboral-y-talento-joven/desigualdad-y-bienestar-socioeconomico/informalidad-laboral-en-mexico"
+                                    style={{ color: 'var(--color-text-main)', textDecoration: 'none', fontWeight: 'bold' }}
+                                >
+                                    Informalidad laboral en México: un análisis estructural y territorial de sus determinantes socioeconómicos...
+                                </Link>
+                            </h3>
+
+                            <p style={{ color: 'var(--color-text-secondary)', fontSize: '1rem', marginBottom: '1.5rem', lineHeight: 1.6 }}>
+                                Análisis sobre la distribución territorial de la informalidad y su relación con variables socioeconómicas.
+                            </p>
+
+                            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', margin: 0 }}>
+                                24 de febrero de 2026
+                            </p>
+                        </article>
                     </div>
                 </div>
             </section>

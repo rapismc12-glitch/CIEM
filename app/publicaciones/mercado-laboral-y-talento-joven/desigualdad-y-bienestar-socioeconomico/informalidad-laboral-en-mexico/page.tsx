@@ -10,8 +10,8 @@ export default function InformalidadLaboralArticle() {
     return (
         <article className="container" style={{ padding: '4rem 1rem', maxWidth: '800px', margin: '0 auto', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
             {/* Breadcrumbs */}
-            <nav style={{ marginBottom: '2rem', fontSize: '0.9rem', color: '#666' }}>
-                <Link href="/publicaciones" style={{ color: '#0056b3', textDecoration: 'none' }}>Publicaciones</Link> &gt; {' '}
+            <nav style={{ marginBottom: '2rem', fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
+                <Link href="/publicaciones" style={{ color: 'var(--color-primary)', textDecoration: 'none' }}>Publicaciones</Link> &gt; {' '}
                 <span>Mercado laboral y talento joven</span> &gt; {' '}
                 <span>Desigualdad y bienestar socioeconómico</span>
             </nav>
@@ -22,8 +22,8 @@ export default function InformalidadLaboralArticle() {
                     <span style={{
                         display: 'inline-block',
                         padding: '0.35rem 0.85rem',
-                        backgroundColor: '#f1f5f9',
-                        color: '#334155',
+                        backgroundColor: 'var(--color-bg-secondary)',
+                        color: 'var(--color-text-main)',
                         borderRadius: '2rem',
                         fontSize: '0.85rem',
                         fontWeight: 600,
@@ -35,8 +35,8 @@ export default function InformalidadLaboralArticle() {
                     <span style={{
                         display: 'inline-block',
                         padding: '0.35rem 0.85rem',
-                        backgroundColor: '#f1f5f9',
-                        color: '#334155',
+                        backgroundColor: 'var(--color-bg-secondary)',
+                        color: 'var(--color-text-main)',
                         borderRadius: '2rem',
                         fontSize: '0.85rem',
                         fontWeight: 600,
@@ -47,19 +47,19 @@ export default function InformalidadLaboralArticle() {
                     </span>
                 </div>
 
-                <h1 style={{ fontSize: '2.5rem', lineHeight: 1.2, marginBottom: '1.5rem', color: '#0f172a', fontWeight: 'bold' }}>
+                <h1 style={{ fontSize: '2.5rem', lineHeight: 1.2, marginBottom: '1.5rem', color: 'var(--color-text-main)', fontWeight: 'bold' }}>
                     Informalidad laboral en México: un análisis estructural y territorial de sus determinantes socioeconómicos, dinámicas regionales y desafíos de política pública
                 </h1>
 
-                <div style={{ color: '#475569', borderLeft: '4px solid #0f172a', paddingLeft: '1.25rem', marginBottom: '2rem' }}>
-                    <p style={{ margin: '0 0 0.25rem 0', fontWeight: '600', fontSize: '1.1rem', color: '#0f172a' }}>Rafael Rodrigo Mata Varela</p>
+                <div style={{ color: 'var(--color-text-secondary)', borderLeft: '4px solid var(--color-primary)', paddingLeft: '1.25rem', marginBottom: '2rem' }}>
+                    <p style={{ margin: '0 0 0.25rem 0', fontWeight: '600', fontSize: '1.1rem', color: 'var(--color-text-main)' }}>Rafael Rodrigo Mata Varela</p>
                     <p style={{ margin: '0 0 0.25rem 0' }}>Centro de Investigación en Economía Moderna — CIEM</p>
                     <p style={{ margin: 0, fontSize: '0.95rem' }}>24 de febrero de 2026</p>
                 </div>
 
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                     {['Pobreza multidimensional', 'Desigualdad', 'Desarrollo regional', 'Política social', 'México', 'Análisis territorial', 'Desarrollo urbano y vivienda'].map(tag => (
-                        <span key={tag} style={{ fontSize: '0.8rem', color: '#64748b', backgroundColor: '#f8fafc', border: '1px solid #e2e8f0', padding: '0.2rem 0.6rem', borderRadius: '4px' }}>
+                        <span key={tag} style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)', backgroundColor: 'var(--color-bg-tertiary)', border: '1px solid var(--color-border)', padding: '0.2rem 0.6rem', borderRadius: '4px' }}>
                             #{tag.toLowerCase().replace(/ /g, '-')}
                         </span>
                     ))}
@@ -67,13 +67,13 @@ export default function InformalidadLaboralArticle() {
             </header>
 
             {/* Contenido principal */}
-            <div style={{ lineHeight: 1.8, color: '#334155', fontSize: '1.125rem' }}>
-                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: '#0f172a', fontSize: '1.75rem' }}>Resumen</h2>
+            <div style={{ lineHeight: 1.8, color: 'var(--color-text-main)', fontSize: '1.125rem' }}>
+                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: 'var(--color-base-darker)', fontSize: '1.75rem' }}>Resumen</h2>
                 <p style={{ marginBottom: '1.5rem' }}>
                     La informalidad laboral representa uno de los rasgos estructurales más persistentes del mercado de trabajo en México y constituye un fenómeno central para comprender las limitaciones del desarrollo económico, la productividad y la distribución del ingreso. Este estudio examina la distribución territorial de la informalidad y su relación con variables socioeconómicas clave como ingreso laboral, pobreza, nivel educativo y estructura productiva regional, integrando un enfoque descriptivo con análisis territorial apoyado en representación cartográfica. A partir de información proveniente de fuentes oficiales, se identifican patrones regionales que evidencian la estrecha relación entre informalidad, desigualdad territorial y heterogeneidad estructural. El análisis permite discutir implicaciones de política pública orientadas a la reducción de brechas regionales y al fortalecimiento del empleo formal como componente esencial del desarrollo económico sostenido.
                 </p>
 
-                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: '#0f172a', fontSize: '1.75rem' }}>Introducción</h2>
+                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: 'var(--color-base-darker)', fontSize: '1.75rem' }}>Introducción</h2>
                 <p style={{ marginBottom: '1.5rem' }}>
                     El mercado laboral constituye uno de los espacios donde se manifiestan con mayor claridad las fortalezas y limitaciones estructurales de una economía. En el caso de México, la persistencia de elevados niveles de informalidad laboral refleja la coexistencia de distintos niveles de productividad, desigualdades regionales profundas y limitaciones en la capacidad del sistema económico para generar empleo formal suficiente y de calidad.
                 </p>
@@ -87,11 +87,11 @@ export default function InformalidadLaboralArticle() {
                 {/* 1️⃣ Gráfico - Serie Histórica */}
                 <figure style={{ margin: '3.5rem 0', textAlign: 'center' }}>
                     <div style={{
-                        backgroundColor: '#f8fafc',
-                        border: '2px dashed #cbd5e1',
+                        backgroundColor: 'var(--color-bg-secondary)',
+                        border: '2px dashed var(--color-border)',
                         padding: '4rem 2rem',
                         borderRadius: '0.5rem',
-                        color: '#64748b',
+                        color: 'var(--color-text-muted)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -100,13 +100,13 @@ export default function InformalidadLaboralArticle() {
                     }}>
                         Visualización en proceso de actualización
                     </div>
-                    <figcaption style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#475569' }}>
-                        <strong style={{ display: 'block', marginBottom: '0.25rem', color: '#0f172a', fontSize: '1rem' }}>Figura 1. Evolución de la Pobreza Multidimensional en México</strong>
+                    <figcaption style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: 'var(--color-text-main)' }}>
+                        <strong style={{ display: 'block', marginBottom: '0.25rem', color: 'var(--color-base-darker)', fontSize: '1rem' }}>Figura 1. Evolución de la Pobreza Multidimensional en México</strong>
                         Serie histórica. Fuente: Elaboración propia con datos de CONEVAL.
                     </figcaption>
                 </figure>
 
-                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: '#0f172a', fontSize: '1.75rem' }}>Contexto del mercado laboral mexicano y evolución reciente</h2>
+                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: 'var(--color-base-darker)', fontSize: '1.75rem' }}>Contexto del mercado laboral mexicano y evolución reciente</h2>
                 <p style={{ marginBottom: '1.5rem' }}>
                     El mercado laboral en México se caracteriza por una marcada heterogeneidad estructural, resultado de procesos históricos de desarrollo desigual, cambios en la estructura productiva y transformaciones en la dinámica económica global. Mientras algunas regiones han experimentado procesos de industrialización y mayor integración a cadenas de valor, otras mantienen estructuras económicas con menor nivel de diversificación y menor productividad.
                 </p>
@@ -120,11 +120,11 @@ export default function InformalidadLaboralArticle() {
                 {/* 2️⃣ Gráfico - Comparación Regional */}
                 <figure style={{ margin: '3.5rem 0', textAlign: 'center' }}>
                     <div style={{
-                        backgroundColor: '#f8fafc',
-                        border: '2px dashed #cbd5e1',
+                        backgroundColor: 'var(--color-bg-secondary)',
+                        border: '2px dashed var(--color-border)',
                         padding: '4rem 2rem',
                         borderRadius: '0.5rem',
-                        color: '#64748b',
+                        color: 'var(--color-text-muted)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -133,13 +133,13 @@ export default function InformalidadLaboralArticle() {
                     }}>
                         Visualización en proceso de actualización
                     </div>
-                    <figcaption style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#475569' }}>
-                        <strong style={{ display: 'block', marginBottom: '0.25rem', color: '#0f172a', fontSize: '1rem' }}>Figura 2. Disparidad Regional de la Pobreza en México</strong>
+                    <figcaption style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: 'var(--color-text-main)' }}>
+                        <strong style={{ display: 'block', marginBottom: '0.25rem', color: 'var(--color-base-darker)', fontSize: '1rem' }}>Figura 2. Disparidad Regional de la Pobreza en México</strong>
                         Comparación regional. Fuente: Elaboración propia con datos de CONEVAL.
                     </figcaption>
                 </figure>
 
-                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: '#0f172a', fontSize: '1.75rem' }}>Marco teórico ampliado</h2>
+                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: 'var(--color-base-darker)', fontSize: '1.75rem' }}>Marco teórico ampliado</h2>
                 <p style={{ marginBottom: '1.5rem' }}>
                     El análisis de la informalidad laboral se sustenta en diversas corrientes teóricas que han buscado explicar su origen y persistencia en economías en desarrollo. El modelo dual de desarrollo propuesto por W. Arthur Lewis constituye uno de los enfoques más influyentes al plantear que las economías presentan un sector moderno caracterizado por alta productividad que convive con un sector tradicional intensivo en trabajo y con baja acumulación de capital. Este enfoque permite interpretar la informalidad como un mecanismo de absorción del excedente laboral.
                 </p>
@@ -153,7 +153,7 @@ export default function InformalidadLaboralArticle() {
                     Investigaciones del Banco Mundial y la Comisión Económica para América Latina y el Caribe han señalado que la informalidad refleja la heterogeneidad estructural de las economías latinoamericanas, donde coexisten sectores modernos con segmentos de baja productividad.
                 </p>
 
-                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: '#0f172a', fontSize: '1.75rem' }}>Metodología detallada</h2>
+                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: 'var(--color-base-darker)', fontSize: '1.75rem' }}>Metodología detallada</h2>
                 <p style={{ marginBottom: '1.5rem' }}>
                     El estudio adopta un enfoque cuantitativo descriptivo complementado con análisis territorial mediante sistemas de información geográfica. Se utilizan datos provenientes de encuestas laborales y estadísticas oficiales para construir indicadores comparables a nivel estatal.
                 </p>
@@ -164,7 +164,7 @@ export default function InformalidadLaboralArticle() {
                     El enfoque metodológico busca proporcionar una aproximación integral que permita comprender tanto la dimensión estructural como la dimensión espacial del fenómeno.
                 </p>
 
-                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: '#0f172a', fontSize: '1.75rem' }}>Resultados y análisis territorial ampliado</h2>
+                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: 'var(--color-base-darker)', fontSize: '1.75rem' }}>Resultados y análisis territorial ampliado</h2>
                 <p style={{ marginBottom: '1.5rem' }}>
                     El análisis evidencia una clara concentración de la informalidad en entidades con menor nivel de ingreso per cápita y mayores niveles de pobreza laboral, lo que sugiere una estrecha relación entre informalidad y rezago económico. Las regiones con menor diversificación productiva presentan mayores dificultades para generar empleo formal, lo que refuerza la interpretación de la informalidad como resultado de limitaciones estructurales.
                 </p>
@@ -178,11 +178,11 @@ export default function InformalidadLaboralArticle() {
                 {/* 3️⃣ Gráfico - Mapa */}
                 <figure style={{ margin: '3.5rem 0', textAlign: 'center' }}>
                     <div style={{
-                        backgroundColor: '#f8fafc',
-                        border: '2px dashed #cbd5e1',
+                        backgroundColor: 'var(--color-bg-secondary)',
+                        border: '2px dashed var(--color-border)',
                         padding: '4rem 2rem',
                         borderRadius: '0.5rem',
-                        color: '#64748b',
+                        color: 'var(--color-text-muted)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -191,13 +191,13 @@ export default function InformalidadLaboralArticle() {
                     }}>
                         Visualización en proceso de actualización
                     </div>
-                    <figcaption style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#475569' }}>
-                        <strong style={{ display: 'block', marginBottom: '0.25rem', color: '#0f172a', fontSize: '1rem' }}>Figura 3. Distribución de la Pobreza Multidimensional en México</strong>
+                    <figcaption style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: 'var(--color-text-main)' }}>
+                        <strong style={{ display: 'block', marginBottom: '0.25rem', color: 'var(--color-base-darker)', fontSize: '1rem' }}>Figura 3. Distribución de la Pobreza Multidimensional en México</strong>
                         Análisis territorial mediante mapas coropléticos. Fuente: Elaboración propia con datos de CONEVAL.
                     </figcaption>
                 </figure>
 
-                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: '#0f172a', fontSize: '1.75rem' }}>Discusión ampliada</h2>
+                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: 'var(--color-base-darker)', fontSize: '1.75rem' }}>Discusión ampliada</h2>
                 <p style={{ marginBottom: '1.5rem' }}>
                     Los resultados sugieren que la informalidad laboral en México responde a un conjunto complejo de factores estructurales que incluyen desigualdades regionales, limitaciones en la estructura productiva y brechas en acumulación de capital humano. La persistencia del fenómeno indica que las políticas orientadas únicamente a la regulación laboral resultan insuficientes para abordar sus causas profundas.
                 </p>
@@ -205,7 +205,7 @@ export default function InformalidadLaboralArticle() {
                     El empleo informal cumple una función de absorción de mano de obra en contextos donde el crecimiento económico no ha sido capaz de generar suficientes oportunidades formales, lo que explica su persistencia incluso en periodos de expansión económica.
                 </p>
 
-                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: '#0f172a', fontSize: '1.75rem' }}>Implicaciones de política pública ampliadas</h2>
+                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: 'var(--color-base-darker)', fontSize: '1.75rem' }}>Implicaciones de política pública ampliadas</h2>
                 <p style={{ marginBottom: '1.5rem' }}>
                     La reducción de la informalidad requiere estrategias integrales que incluyan políticas de desarrollo productivo orientadas a incrementar la complejidad económica y la diversificación sectorial, especialmente en regiones con menor nivel de industrialización.
                 </p>
@@ -216,7 +216,7 @@ export default function InformalidadLaboralArticle() {
                     El fortalecimiento de sistemas de protección social puede reducir la vulnerabilidad asociada al empleo informal y mejorar las condiciones de bienestar.
                 </p>
 
-                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: '#0f172a', fontSize: '1.75rem' }}>Conclusiones extensas</h2>
+                <h2 style={{ marginTop: '2.5rem', marginBottom: '1.25rem', color: 'var(--color-base-darker)', fontSize: '1.75rem' }}>Conclusiones extensas</h2>
                 <p style={{ marginBottom: '1.5rem' }}>
                     La informalidad laboral constituye un fenómeno estructural que refleja limitaciones en el desarrollo económico y desigualdades territoriales persistentes. Su análisis territorial permite identificar patrones diferenciados que evidencian la relación entre informalidad, capital humano y estructura productiva.
                 </p>
@@ -225,9 +225,9 @@ export default function InformalidadLaboralArticle() {
                 </p>
 
                 {/* Referencias bibliográficas */}
-                <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid #e2e8f0' }}>
-                    <h3 style={{ marginBottom: '1.25rem', color: '#0f172a', fontSize: '1.25rem' }}>Referencias</h3>
-                    <ul style={{ listStyleType: 'none', padding: 0, margin: 0, fontSize: '0.95rem', color: '#475569' }}>
+                <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid var(--color-border)' }}>
+                    <h3 style={{ marginBottom: '1.25rem', color: 'var(--color-base-darker)', fontSize: '1.25rem' }}>Referencias</h3>
+                    <ul style={{ listStyleType: 'none', padding: 0, margin: 0, fontSize: '0.95rem', color: 'var(--color-text-main)' }}>
                         <li style={{ marginBottom: '0.75rem' }}>W. Arthur Lewis (1954). <em>Economic Development with Unlimited Supplies of Labour.</em></li>
                         <li style={{ marginBottom: '0.75rem' }}>Hernando de Soto (1989). <em>The Other Path.</em></li>
                         <li style={{ marginBottom: '0.75rem' }}>Banco Mundial. <em>Informes sobre informalidad laboral.</em></li>
@@ -240,8 +240,8 @@ export default function InformalidadLaboralArticle() {
             </div>
 
             {/* Copyright / Footer Note */}
-            <footer style={{ marginTop: '5rem', borderTop: '2px solid #0f172a', paddingTop: '2rem', textAlign: 'center' }}>
-                <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>
+            <footer style={{ marginTop: '5rem', borderTop: '2px solid var(--color-base-darker)', paddingTop: '2rem', textAlign: 'center' }}>
+                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', margin: 0 }}>
                     © Centro de Investigación en Economía Moderna — CIEM
                 </p>
             </footer>
