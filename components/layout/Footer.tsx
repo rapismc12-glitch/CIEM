@@ -8,7 +8,7 @@ export default function Footer() {
             <div className={`container ${styles.footerGrid}`}>
                 <div className={styles.brandSection}>
                     <div className={styles.logo}>
-                        <Image src="/logo-circular.png" alt="CIEM Logo" width={140} height={140} style={{ objectFit: 'contain' }} />
+                        <Image src="/logo.png" alt="CIEM Logo" width={240} height={80} className={styles.logoImage} style={{ objectFit: 'contain' }} />
                     </div>
                     <p className={styles.description}>
                         El Centro de Investigación en Economía Moderna es un espacio académico dedicado a la generación de análisis económico aplicado y la formación de talento joven en investigación.
