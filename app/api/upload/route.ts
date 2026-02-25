@@ -4,8 +4,6 @@ import { openai } from "@ai-sdk/openai";
 import { saveArticle, ArticleMetadata } from "@/lib/articles";
 import { cookies } from "next/headers";
 import { decrypt } from "@/lib/auth";
-import pdfParse from "pdf-parse";
-import mammoth from "mammoth";
 
 // Tell Next.js we want to run this dynamic API on Node.js.
 // Since pdf-parse works best in Node.js standard environment.
