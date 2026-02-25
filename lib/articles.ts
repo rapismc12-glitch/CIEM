@@ -22,18 +22,28 @@ export async function getArticles(): Promise<ArticleMetadata[]> {
         `;
 
         // Parse the tags string back to array if needed (Postgres text stores it as string)
-        return rows.map(row => ({
+        let dbArticles = rows.map(row => ({
             ...row,
             tags: JSON.parse(row.tags)
         })) as ArticleMetadata[];
 
+        // Always append the hardcoded first article if it's not already in the DB
+        if (!dbArticles.some(a => a.slug === 'informalidad-laboral-en-mexico')) {
+            dbArticles.push(getHardcodedArticle());
+        }
+
+        // Sort by date again after appending
+        dbArticles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+        return dbArticles;
+
     } catch (error: any) {
         if (error.message.includes('relation "articles" does not exist')) {
-            console.log("Articles table not found. Returning empty array.");
-            return [];
+            console.log("Articles table not found. Returning hardcoded article fallback.");
+            return [getHardcodedArticle()];
         }
         console.error('Error reading articles from Postgres:', error);
-        return [];
+        return [getHardcodedArticle()];
     }
 }
 
@@ -44,14 +54,27 @@ export async function getArticlesByNiche(niche: string): Promise<ArticleMetadata
             WHERE niche = ${niche}
             ORDER BY date DESC
         `;
-        return rows.map(row => ({ ...row, tags: JSON.parse(row.tags) })) as ArticleMetadata[];
+        let dbArticles = rows.map(row => ({ ...row, tags: JSON.parse(row.tags) })) as ArticleMetadata[];
+
+        // Append hardcoded if applicable
+        if (niche === 'mercado-laboral-joven' && !dbArticles.some(a => a.slug === 'informalidad-laboral-en-mexico')) {
+            dbArticles.push(getHardcodedArticle());
+        }
+
+        dbArticles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        return dbArticles;
     } catch (error) {
-        return [];
+        return niche === 'mercado-laboral-joven' ? [getHardcodedArticle()] : [];
     }
 }
 
 export async function getArticleBySlug(niche: string, slug: string): Promise<{ metadata: ArticleMetadata, content: string } | null> {
     try {
+        // Intercept the hardcoded specific article
+        if (slug === 'informalidad-laboral-en-mexico' && niche === 'mercado-laboral-joven') {
+            return { metadata: getHardcodedArticle(), content: "static" };
+        }
+
         const { rows } = await sql`
             SELECT * FROM articles 
             WHERE slug = ${slug} AND niche = ${niche}
@@ -64,9 +87,27 @@ export async function getArticleBySlug(niche: string, slug: string): Promise<{ m
 
         return { metadata, content: `Document saved at: ${metadata.fileUrl}` };
     } catch (error) {
+        if (slug === 'informalidad-laboral-en-mexico' && niche === 'mercado-laboral-joven') {
+            return { metadata: getHardcodedArticle(), content: "static" };
+        }
         console.error(`Error reading article ${slug}:`, error);
         return null;
     }
+}
+
+// Helper block for the preserved legacy article
+function getHardcodedArticle(): ArticleMetadata {
+    return {
+        title: "Informalidad laboral en México: un análisis estructural y territorial de sus determinantes socioeconómicos, dinámicas regionales y desafíos de política pública",
+        slug: "informalidad-laboral-en-mexico",
+        niche: "mercado-laboral-joven",
+        date: "2026-02-24T00:00:00.000Z",
+        author: "Rafael Rodrigo Mata Varela",
+        abstract: "La informalidad laboral representa uno de los rasgos estructurales más persistentes del mercado de trabajo en México y constituye un fenómeno central para comprender las limitaciones del desarrollo económico, la productividad y la distribución del ingreso. Este estudio examina la distribución territorial de la informalidad y su relación con variables socioeconómicas clave como ingreso laboral, pobreza, nivel educativo y estructura productiva regional.",
+        tags: ["Pobreza multidimensional", "Desigualdad", "Desarrollo regional", "Política social", "México"],
+        type: "Policy Brief",
+        fileUrl: "" // Hardcoded layout handles itself
+    };
 }
 
 export async function saveArticle(metadata: ArticleMetadata, originalBuffer: Buffer, extension: string): Promise<boolean> {
