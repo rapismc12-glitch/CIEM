@@ -20,16 +20,21 @@ const publicUploadsDir = path.join(process.cwd(), 'public', 'uploads', 'document
 
 // Ensure directories exist
 function ensureDirectories() {
-    if (!fs.existsSync(path.join(process.cwd(), 'content'))) fs.mkdirSync(path.join(process.cwd(), 'content'));
-    if (!fs.existsSync(contentDir)) fs.mkdirSync(contentDir, { recursive: true });
-    if (!fs.existsSync(registryPath)) fs.writeFileSync(registryPath, JSON.stringify([]), 'utf-8');
+    try {
+        if (!fs.existsSync(path.join(process.cwd(), 'content'))) fs.mkdirSync(path.join(process.cwd(), 'content'));
+        if (!fs.existsSync(contentDir)) fs.mkdirSync(contentDir, { recursive: true });
+        if (!fs.existsSync(registryPath)) fs.writeFileSync(registryPath, JSON.stringify([]), 'utf-8');
 
-    // Public uploads dir for hosting original files
-    const publicDir = path.join(process.cwd(), 'public');
-    if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir);
-    const uploadsDir = path.join(publicDir, 'uploads');
-    if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir);
-    if (!fs.existsSync(publicUploadsDir)) fs.mkdirSync(publicUploadsDir);
+        // Public uploads dir for hosting original files
+        const publicDir = path.join(process.cwd(), 'public');
+        if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir);
+        const uploadsDir = path.join(publicDir, 'uploads');
+        if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir);
+        if (!fs.existsSync(publicUploadsDir)) fs.mkdirSync(publicUploadsDir);
+    } catch (e) {
+        // Ignore read-only file system errors on Vercel
+        console.warn("Could not ensure directories. Ignoring due to read-only environment.");
+    }
 }
 
 export function getArticles(): ArticleMetadata[] {
