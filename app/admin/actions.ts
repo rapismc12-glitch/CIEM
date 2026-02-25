@@ -23,7 +23,8 @@ export async function deleteArticleAction(niche: string, slug: string): Promise<
     const isAuthenticated = await requireAuth();
     if (!isAuthenticated) return { success: false, error: "Unauthorized" };
 
-    const success = deleteArticle(niche, slug);
+    // We must await the Vercel Postgres query now
+    const success = await deleteArticle(niche, slug);
     if (success) {
         return { success: true };
     } else {

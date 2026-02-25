@@ -4,7 +4,10 @@ import ProjectCard from '@/components/ui/ProjectCard'
 import { getArticles } from '@/lib/articles'
 
 export default async function Home() {
-    const recentArticles = getArticles().slice(0, 3);
+    const articles = await getArticles();
+
+    // Select top 3 most recent articles for the carousel
+    const recentArticles = articles.slice(0, 3);
 
     // Fetch active projects or get from constant
     const activeProjects = [

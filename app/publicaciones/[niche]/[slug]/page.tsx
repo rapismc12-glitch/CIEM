@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 
 export default async function ArticlePage({ params }: { params: Promise<{ niche: string, slug: string }> }) {
     const { niche, slug } = await params;
-    const articleData = getArticleBySlug(niche, slug);
+    const articleData = await getArticleBySlug(niche, slug);
 
     if (!articleData) {
         notFound();

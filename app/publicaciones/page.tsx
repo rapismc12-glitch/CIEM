@@ -14,7 +14,7 @@ const NICHES = [
 ];
 
 export default async function Publicaciones() {
-    const articles = getArticles();
+    const articles = await getArticles();
 
     return (
         <div className="container" style={{ padding: '4rem 1rem', maxWidth: '1000px', margin: '0 auto', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
