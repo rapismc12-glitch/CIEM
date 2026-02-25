@@ -51,7 +51,7 @@ export default function Investigacion() {
                                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                     <li>
                                         <a
-                                            href="/publicaciones/mercado-laboral-y-talento-joven/desigualdad-y-bienestar-socioeconomico/informalidad-laboral-en-mexico"
+                                            href="/publicaciones/mercado-laboral-joven/informalidad-laboral-en-mexico"
                                             style={{ color: 'var(--color-primary)', fontWeight: 500, fontSize: '1.05rem', textDecoration: 'none' }}
                                         >
                                             → Informalidad laboral en México: un análisis estructural y territorial
