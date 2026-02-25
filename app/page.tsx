@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import styles from './page.module.css'
 import ProjectCard from '@/components/ui/ProjectCard'
+import { getArticles } from '@/lib/articles'
 
-export default function Home() {
+export default async function Home() {
+    const recentArticles = getArticles().slice(0, 3);
 
     // Fetch active projects or get from constant
     const activeProjects = [
@@ -63,43 +65,49 @@ export default function Home() {
                         <Link href="/publicaciones" className={styles.viewAll}>Ver todas &rarr;</Link>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5rem', marginBottom: '2rem' }}>
-                        <article style={{
-                            padding: '2rem',
-                            backgroundColor: 'var(--color-bg-main)',
-                            border: '1px solid var(--color-border)',
-                            borderRadius: 'var(--radius-md)',
-                            boxShadow: 'var(--shadow-sm)'
-                        }}>
-                            <div style={{ marginBottom: '1rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                                <span style={{
-                                    padding: '0.25rem 0.75rem',
-                                    backgroundColor: 'var(--color-bg-secondary)',
-                                    color: 'var(--color-text-secondary)',
-                                    borderRadius: '1rem',
-                                    fontSize: '0.8rem',
-                                    fontWeight: 600
-                                }}>
-                                    Policy Brief
-                                </span>
-                            </div>
+                        {recentArticles.length > 0 ? recentArticles.map(article => (
+                            <article key={article.slug} style={{
+                                padding: '2rem',
+                                backgroundColor: 'var(--color-bg-main)',
+                                border: '1px solid var(--color-border)',
+                                borderRadius: 'var(--radius-md)',
+                                boxShadow: 'var(--shadow-sm)'
+                            }}>
+                                <div style={{ marginBottom: '1rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                                    <span style={{
+                                        padding: '0.25rem 0.75rem',
+                                        backgroundColor: 'var(--color-bg-secondary)',
+                                        color: 'var(--color-text-secondary)',
+                                        borderRadius: '1rem',
+                                        fontSize: '0.8rem',
+                                        fontWeight: 600
+                                    }}>
+                                        {article.type}
+                                    </span>
+                                </div>
 
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', lineHeight: 1.3 }}>
-                                <Link
-                                    href="/publicaciones/mercado-laboral-y-talento-joven/desigualdad-y-bienestar-socioeconomico/informalidad-laboral-en-mexico"
-                                    style={{ color: 'var(--color-text-main)', textDecoration: 'none', fontWeight: 'bold' }}
-                                >
-                                    Informalidad laboral en México: un análisis estructural y territorial de sus determinantes socioeconómicos...
-                                </Link>
-                            </h3>
+                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', lineHeight: 1.3 }}>
+                                    <Link
+                                        href={`/publicaciones/${article.niche}/${article.slug}`}
+                                        style={{ color: 'var(--color-text-main)', textDecoration: 'none', fontWeight: 'bold' }}
+                                    >
+                                        {article.title}
+                                    </Link>
+                                </h3>
 
-                            <p style={{ color: 'var(--color-text-secondary)', fontSize: '1rem', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-                                Análisis sobre la distribución territorial de la informalidad y su relación con variables socioeconómicas.
+                                <p style={{ color: 'var(--color-text-secondary)', fontSize: '1rem', marginBottom: '1.5rem', lineHeight: 1.6 }}>
+                                    {article.abstract.substring(0, 150)}...
+                                </p>
+
+                                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', margin: 0 }}>
+                                    {new Date(article.date).toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}
+                                </p>
+                            </article>
+                        )) : (
+                            <p style={{ color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
+                                Aún no hay publicaciones recientes.
                             </p>
-
-                            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', margin: 0 }}>
-                                24 de febrero de 2026
-                            </p>
-                        </article>
+                        )}
                     </div>
                 </div>
             </section>
