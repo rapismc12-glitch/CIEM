@@ -148,7 +148,7 @@ export default function AdminDashboardClient({ initialArticles }: { initialArtic
 
                     {/* Niche select */}
                     <div>
-                        <label style={{ display: "block", marginBottom: "0.5rem", fontWeight: 600, color: "var(--color-text-main)" }}>Nicho / Categoría</label>
+                        <label style={{ display: "block", marginBottom: "0.5rem", fontWeight: 600, color: "var(--color-text-main)" }}>Línea de Investigación</label>
                         <select
                             value={niche}
                             onChange={(e) => setNiche(e.target.value)}
